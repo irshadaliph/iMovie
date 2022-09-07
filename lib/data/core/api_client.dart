@@ -1,0 +1,21 @@
+import 'dart:convert';
+
+import 'package:http/http.dart';
+import 'package:i_movie/data/core/api_constants.dart';
+
+class ApiClient {
+  final Client _client;
+  ApiClient(this._client);
+  dynamic get(String path) async {
+    var url = Uri.parse(
+        '${ApiConstants.BASE_URL}$path?api_key=${ApiConstants.API_KEY}');
+    final response = await _client.get(url, headers: {
+      'Content-Type': 'application/jason',
+    });
+    if (response.statusCode == 200) {
+      return json.decode(response.body);
+    } else {
+      throw Exception(response.reasonPhrase);
+    }
+  }
+}
