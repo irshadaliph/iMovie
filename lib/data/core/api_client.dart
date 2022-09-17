@@ -12,6 +12,12 @@ class ApiClient {
     final response = await _client.get(url, headers: {
       'Content-Type': 'application/jason',
     });
+    // final response = await _client.get(
+    //   '${ApiConstants.BASE_URL}$path?api_key=${ApiConstants.API_KEY}',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    // );
     if (response.statusCode == 200) {
       return json.decode(response.body);
     } else {

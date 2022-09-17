@@ -7,10 +7,10 @@ import 'package:i_movie/data/models/movie_model.dart';
 import 'package:i_movie/data/models/movies_result_model.dart';
 
 abstract class MovieRemoteDataSource {
-  Future<List<MovieModel>?> getTrending();
-  Future<List<MovieModel>?> getPopular();
-  Future<List<MovieModel>?> getPlayingNow();
-  Future<List<MovieModel>?> getComingSoon();
+  Future<List<MovieModel>> getTrending();
+  Future<List<MovieModel>> getPopular();
+  Future<List<MovieModel>> getPlayingNow();
+  Future<List<MovieModel>> getComingSoon();
 }
 
 class MovieRemoteDataSourceImpl extends MovieRemoteDataSource {
@@ -19,28 +19,28 @@ class MovieRemoteDataSourceImpl extends MovieRemoteDataSource {
   MovieRemoteDataSourceImpl(this._client, this._client2);
 
   @override
-  Future<List<MovieModel>?> getTrending() async {
+  Future<List<MovieModel>> getTrending() async {
     final response = await _client.get('trending/movie/day');
     final movies = MoviesResultModel.fromJson(response).movies;
     return movies;
   }
 
   @override
-  Future<List<MovieModel>?> getPlayingNow() async {
+  Future<List<MovieModel>> getPlayingNow() async {
     final response = await _client.get('movie/upcoming');
     final movies = MoviesResultModel.fromJson(response).movies;
     return movies;
   }
 
   @override
-  Future<List<MovieModel>?> getComingSoon() async {
+  Future<List<MovieModel>> getComingSoon() async {
     final response = await _client.get('movie/now_playing');
     final movies = MoviesResultModel.fromJson(response).movies;
     return movies;
   }
 
   @override
-  Future<List<MovieModel>?> getPopular() async {
+  Future<List<MovieModel>> getPopular() async {
     var url = Uri.parse(
         '${ApiConstants.BASE_URL}movie/popular?api_key=${ApiConstants.API_KEY}');
     final response = await _client2.get(url, headers: {
