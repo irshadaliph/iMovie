@@ -37,6 +37,8 @@ dependencies:
   equatable: ^2.0.5
   http: ^0.13.5
   dartz: ^0.10.1
+  get_it: 6.1.1
+  pedantic: ^1.11.1
 
 dev_dependencies:
   flutter_test:
