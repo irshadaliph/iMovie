@@ -5,17 +5,9 @@ abstract class MovieCarouselState extends Equatable {
 
   @override
   List<Object> get props => [];
-
-  get movies => null;
-
-  get defaultIndex => null;
 }
 
-class MovieCarouselInitial extends MovieCarouselState {
-  get movies => null;
-
-  get defaultIndex => null;
-}
+class MovieCarouselInitial extends MovieCarouselState {}
 
 class MovieCarouselError extends MovieCarouselState {}
 

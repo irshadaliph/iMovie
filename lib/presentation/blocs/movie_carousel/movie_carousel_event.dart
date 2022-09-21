@@ -6,6 +6,7 @@ abstract class MovieCarouselEvent extends Equatable {
   @override
   List<Object> get props => [];
 }
+
 class CarouselLoadEvent extends MovieCarouselEvent {
   final int defaultIndex;
 

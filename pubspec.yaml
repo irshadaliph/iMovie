@@ -36,10 +36,10 @@ dependencies:
   equatable: ^2.0.5
   http: ^0.13.5
   dartz: ^0.10.1
-  get_it: 6.1.1
+  get_it: ^7.0.0
   pedantic: ^1.11.1
   google_fonts: ^3.0.1
-  flutter_bloc: ^8.1.1
+  flutter_bloc: ^7.0.0
   flutter_svg: ^1.1.5
   cached_network_image: ^3.2.2
 

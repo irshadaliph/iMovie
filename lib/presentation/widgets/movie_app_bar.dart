@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../common/constants/size_constants.dart';
-import '../../common/extensions/size_extensions.dart';
-import '../../common/screenutil/screenutil.dart';
 import 'logo.dart';
 
 class MovieAppBar extends StatelessWidget {
@@ -12,9 +10,9 @@ class MovieAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-        top: ScreenUtil.statusBarHeight + Sizes.dimen_4.h,
-        left: Sizes.dimen_16.w,
-        right: Sizes.dimen_16.w,
+        top: MediaQuery.of(context).viewPadding.top,
+        left: Sizes.dimen_16,
+        right: Sizes.dimen_16,
       ),
       child: Row(
         children: <Widget>[
@@ -22,16 +20,16 @@ class MovieAppBar extends StatelessWidget {
             onPressed: () {},
             icon: SvgPicture.asset(
               'assets/svgs/menu.svg',
-              height: Sizes.dimen_12.h,
+              height: Sizes.dimen_20,
             ),
           ),
-          Expanded(child: Logo(height: Sizes.dimen_14.h)),
+          const Expanded(child: Logo(height: Sizes.dimen_24)),
           IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               Icons.search,
               color: Colors.white,
-              size: Sizes.dimen_12.h,
+              size: Sizes.dimen_20,
             ),
           ),
         ],
