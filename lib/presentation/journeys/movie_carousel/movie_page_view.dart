@@ -46,7 +46,6 @@ class _MoviePageViewState extends State<MoviePageView> {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: Sizes.dimen_10),
-      // height: ScreenUtil.screenHeight * 0.35,
       height: MediaQuery.of(context).size.height * 0.35,
       child: PageView.builder(
         controller: _pageController,
