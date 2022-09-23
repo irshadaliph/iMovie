@@ -5,11 +5,12 @@ import 'package:i_movie/domain/repositories/movie_repository.dart';
 import 'package:i_movie/domain/usecases/usecase.dart';
 import '../entities/no_params.dart';
 
-class GetPopular extends UseCase<List<MovieEntity>,NoParams> {
+class GetPopular extends UseCase<List<MovieEntity>, NoParams> {
   final MovieRepository repository;
 
   GetPopular(this.repository);
   @override
+
   // ignore: avoid_renaming_method_parameters
   Future<Either<AppError, List<MovieEntity>>> call(NoParams noParams) async {
     return await repository.getPopular();

@@ -2,11 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:i_movie/common/constants/size_constants.dart';
 import 'package:i_movie/domain/entities/movie_entitiy.dart';
 import 'package:i_movie/presentation/blocs/movie_backdrop/movie_backdrop_bloc.dart';
-
-import '../../../../common/constants/size_constants.dart';
-
 import 'animated_movie_card_widget.dart';
 
 class MoviePageView extends StatefulWidget {
@@ -45,7 +43,7 @@ class _MoviePageViewState extends State<MoviePageView> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: Sizes.dimen_10),
+      margin: const EdgeInsets.symmetric(vertical: Sizes .dimen_1),
       height: MediaQuery.of(context).size.height * 0.35,
       child: PageView.builder(
         controller: _pageController,

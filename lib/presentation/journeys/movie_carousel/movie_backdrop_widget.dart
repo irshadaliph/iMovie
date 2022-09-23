@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:i_movie/common/constants/size_constants.dart';
 import 'package:i_movie/common/screenutil/screenutil.dart';
-
 import 'package:i_movie/data/core/api_constants.dart';
 import 'package:i_movie/presentation/blocs/movie_backdrop/movie_backdrop_bloc.dart';
 

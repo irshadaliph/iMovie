@@ -3,7 +3,6 @@ import 'package:i_movie/domain/entities/movie_entitiy.dart';
 import 'package:i_movie/presentation/journeys/movie_tabbed/movie_tab_card_widget.dart';
 
 class MovieListViewBuilder extends StatelessWidget {
-  //1
   final List<MovieEntity> movies;
 
   const MovieListViewBuilder({super.key, required this.movies});

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:i_movie/domain/entities/movie_entitiy.dart';
 import 'package:i_movie/presentation/widgets/movie_app_bar.dart';
 import 'package:i_movie/presentation/widgets/separator.dart';
-
 import 'movie_backdrop_widget.dart';
 import 'movie_data_widget.dart';
 import 'movie_page_view.dart';
